@@ -8,7 +8,7 @@ const NotesPage = () => {
   const navigate = useNavigate();
   const { code, setCode } = useContext(CodeContext);
   const [data, setData] = useState("");
-  const BACKEND_URL = "http://13.201.97.3:8080/data";
+  const BACKEND_URL = process.env.REACT_APP_BACKENT_URL;
   useEffect(() => {
     try {
       if (!code) {
